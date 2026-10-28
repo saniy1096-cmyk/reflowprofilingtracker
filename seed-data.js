@@ -1,0 +1,42 @@
+// Restores the tracker data from NationGate_Profile_Board_Tracking_2026-10-20.xlsx.
+// The app keeps its data in this browser's localStorage, so this runs once per
+// browser before the app loads and merges the records in without overwriting
+// anything entered on this site since.
+(function () {
+  var KEY = "pbt-state-v1";
+  var FLAG = "pbt-seed-2026-10-20";
+  var SEED = {"boards":[{"no":1,"product":"AAOI","model":"TOP (1R)"},{"no":2,"product":"AAOI","model":"BOTTOM (2R)"},{"no":3,"product":"LUMENTUM","model":"MB_22378792_BOTTOM (1R)"},{"no":4,"product":"LUMENTUM","model":"MB_22378792_TOP (2R)"},{"no":5,"product":"COHERENT","model":"1101488_BOTTOM (1R)"},{"no":6,"product":"COHERENT","model":"1101488_TOP (2R)"},{"no":7,"product":"LUMENTUM","model":"DB_22378793"},{"no":8,"product":"COHERENT","model":"1115812_BOTTOM (1R)"},{"no":9,"product":"COHERENT","model":"1282073_TOP (2R)"}],"calibration":{"1":{"lastCal":"2026-08-04","pic":"PeiPei"},"2":{"lastCal":"2026-08-04","pic":"PeiPei"},"3":{"lastCal":"2026-08-21","pic":"Muaz"},"4":{"lastCal":"2026-08-24","pic":"Muaz"},"5":{"lastCal":"2026-09-03","pic":"Sara"},"6":{"lastCal":"2026-09-14","pic":"Sara"},"7":{"lastCal":"2026-10-20","pic":"Muaz"},"8":{"lastCal":"2026-09-15","pic":"Sara"},"9":{"lastCal":"2026-10-01","pic":"Sara"}},"checks":[],"usage":[{"id":1760918400000,"no":2,"dateOut":"2026-09-30","borrower":"SANIY","purpose":"SMT11C","expectedReturn":"2026-09-30","actualReturn":"2026-09-30","remarks":""},{"id":1760918400001,"no":6,"dateOut":"2026-09-30","borrower":"SANIY","purpose":"SMT11B","expectedReturn":"2026-09-30","actualReturn":"2026-09-30","remarks":""},{"id":1760918400002,"no":6,"dateOut":"2026-09-30","borrower":"SANIY","purpose":"SMT11B","expectedReturn":"2026-09-30","actualReturn":"2026-09-30","remarks":""},{"id":1760918400003,"no":7,"dateOut":"2026-10-20","borrower":"AINUL","purpose":"SMT11A PROFILING","expectedReturn":"2026-10-20","actualReturn":"2026-10-20","remarks":""},{"id":1760918400004,"no":5,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11A PROFILING","expectedReturn":"2026-09-11","actualReturn":"2026-10-20","remarks":""},{"id":1760918400005,"no":5,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11A PROFILING","expectedReturn":"2026-09-14","actualReturn":"2026-10-20","remarks":""},{"id":1760918400006,"no":6,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11A PROFILING","expectedReturn":"2026-09-14","actualReturn":"2026-10-20","remarks":""},{"id":1760918400007,"no":5,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11A PROFILING","expectedReturn":"2026-09-15","actualReturn":"2026-10-20","remarks":""},{"id":1760918400008,"no":8,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11A PROFILING","expectedReturn":"2026-09-15","actualReturn":"2026-10-20","remarks":""},{"id":1760918400009,"no":8,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11A PROFILING","expectedReturn":"2026-09-17","actualReturn":"2026-10-20","remarks":""},{"id":1760918400010,"no":6,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11A PROFILING","expectedReturn":"2026-09-21","actualReturn":"2026-10-20","remarks":""},{"id":1760918400011,"no":6,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11A PROFILING","expectedReturn":"2026-09-24","actualReturn":"2026-10-20","remarks":""},{"id":1760918400012,"no":6,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11A PROFILING","expectedReturn":"2026-09-28","actualReturn":"2026-10-20","remarks":""},{"id":1760918400013,"no":8,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11A PROFILING","expectedReturn":"2026-09-30","actualReturn":"2026-10-20","remarks":""},{"id":1760918400014,"no":8,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11A PROFILING","expectedReturn":"2026-10-01","actualReturn":"2026-10-20","remarks":""},{"id":1760918400015,"no":9,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11A PROFILING","expectedReturn":"2026-10-01","actualReturn":"2026-10-20","remarks":""},{"id":1760918400016,"no":8,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11A PROFILING","expectedReturn":"2026-10-02","actualReturn":"2026-10-20","remarks":""},{"id":1760918400017,"no":8,"dateOut":"2026-10-20","borrower":"AINUL","purpose":"SMT11A PROFILING","expectedReturn":"2026-10-12","actualReturn":"2026-10-20","remarks":""},{"id":1760918400018,"no":6,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11B PROFILING","expectedReturn":"2026-09-10","actualReturn":"2026-10-20","remarks":""},{"id":1760918400019,"no":6,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11B PROFILING","expectedReturn":"2026-09-11","actualReturn":"2026-10-20","remarks":""},{"id":1760918400020,"no":6,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11B PROFILING","expectedReturn":"2026-09-14","actualReturn":"2026-10-20","remarks":""},{"id":1760918400021,"no":6,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11B PROFILING","expectedReturn":"2026-09-15","actualReturn":"2026-10-20","remarks":""},{"id":1760918400022,"no":1,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11B PROFILING","expectedReturn":"2026-09-17","actualReturn":"2026-10-20","remarks":""},{"id":1760918400023,"no":6,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11B PROFILING","expectedReturn":"2026-09-24","actualReturn":"2026-10-20","remarks":""},{"id":1760918400024,"no":1,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11B PROFILING","expectedReturn":"2026-09-28","actualReturn":"2026-10-20","remarks":""},{"id":1760918400025,"no":9,"dateOut":"2026-10-20","borrower":"ISKANDAR","purpose":"SMT11B PROFILING","expectedReturn":"2026-10-01","actualReturn":"2026-10-20","remarks":""},{"id":1760918400026,"no":9,"dateOut":"2026-10-20","borrower":"ISKANDAR","purpose":"SMT11B PROFILING","expectedReturn":"2026-10-02","actualReturn":"2026-10-20","remarks":""},{"id":1760918400027,"no":1,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11B ","expectedReturn":"2026-10-07","actualReturn":"2026-10-20","remarks":""},{"id":1760918400028,"no":2,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11B PROFILING","expectedReturn":"2026-10-12","actualReturn":"2026-10-20","remarks":""},{"id":1760918400029,"no":2,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11B PROFILING","expectedReturn":"2026-10-14","actualReturn":"2026-10-20","remarks":""},{"id":1760918400030,"no":2,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11B PROFILING","expectedReturn":"2026-10-16","actualReturn":"2026-10-20","remarks":""},{"id":1760918400031,"no":2,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11B PROFILING","expectedReturn":"2026-10-19","actualReturn":"2026-10-20","remarks":""},{"id":1760918400032,"no":9,"dateOut":"2026-10-20","borrower":"SANIY","purpose":"SMT11B PROFILING","expectedReturn":"2026-10-20","actualReturn":"2026-10-20","remarks":""}],"qrMap":{"UMT4C1900616AG6150D2QGC":1,"UMT4B2405013AG6150C2ZH5":2,"787922634040007":3,"787922634040002":4,"1089921B1_S1926000A0808A":5,"1089921B1_S192600070K0BA":6,"1089921b1_s192600070k0ba":6,"787932634010003":7}};
+  try {
+    if (localStorage.getItem(FLAG)) return;
+    var raw = localStorage.getItem(KEY);
+    var state = raw ? JSON.parse(raw) : null;
+    if (!state) {
+      state = SEED;
+    } else {
+      var boards = state.boards || [];
+      SEED.boards.forEach(function (b) {
+        if (!boards.some(function (x) { return x.no === b.no; })) boards.push(b);
+      });
+      boards.sort(function (a, b) { return a.no - b.no; });
+      state.boards = boards;
+
+      var cal = state.calibration || {};
+      Object.keys(SEED.calibration).forEach(function (no) {
+        if (!cal[no] || !cal[no].lastCal) cal[no] = Object.assign({}, SEED.calibration[no], cal[no], { lastCal: SEED.calibration[no].lastCal });
+      });
+      state.calibration = cal;
+
+      var usage = state.usage || [];
+      var sig = function (e) { return [e.no, e.dateOut, e.borrower, e.purpose, e.expectedReturn].join("|"); };
+      var seen = {};
+      usage.forEach(function (e) { seen[sig(e)] = true; });
+      var missing = SEED.usage.filter(function (e) { return !seen[sig(e)]; });
+      state.usage = missing.concat(usage);
+
+      state.checks = state.checks || [];
+      state.qrMap = Object.assign({}, SEED.qrMap, state.qrMap || {});
+    }
+    localStorage.setItem(KEY, JSON.stringify(state));
+    localStorage.setItem(FLAG, "1");
+  } catch (e) {}
+})();
